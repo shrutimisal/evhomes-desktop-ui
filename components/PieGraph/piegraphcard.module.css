@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    
+  }
+  
+  .chartWrapper {
+    text-align: center;
+    padding: 10px;
+   
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
