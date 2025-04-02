@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./navbar.module.css";
 import { FaBell, FaUserCircle } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,7 +16,12 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo} onClick={() => navigateTo("/")}>
-        Logo
+      <Image
+          src="/images/evhomeslogo.png"
+          alt="EV Homes Logo"
+          width={250}
+          height={50}
+        />
       </div>
       <ul className={styles.navLinks}>
         <li
