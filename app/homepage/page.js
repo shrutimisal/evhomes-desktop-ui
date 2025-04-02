@@ -10,7 +10,7 @@ import Extraoptions from "@/components/ExtraOptions/Extraoptions";
 const HomePage = () => {
   return <div>
     {/* <Quickaccessoptions/> */}
-    <Extraoptions/>
+    {/* <Extraoptions/> */}
     <Leadcards/>
     <div className={styles.linePieContainer}> 
     <Linegraphcard/>
