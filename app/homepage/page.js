@@ -6,6 +6,7 @@ import Quickaccessoptions from "@/components/QuickAccess/Quickaccessoptions";
 import styles from "./homepage.module.css";
 import React from "react";
 import Extraoptions from "@/components/ExtraOptions/Extraoptions";
+import Taskcards from "@/components/TaskCards/Taskcards";
 
 const HomePage = () => {
   return <div>
@@ -16,6 +17,7 @@ const HomePage = () => {
     <Linegraphcard/>
     <Piegraphcard/>
     </div>
+    <Taskcards/>
   </div>;
 };
 
