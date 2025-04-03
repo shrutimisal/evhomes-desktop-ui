@@ -1,0 +1,10 @@
+.filleadlistContainer {
+    display: flex;
+    gap: 10px; 
+    align-items: flex-start; 
+  }
+  
+  .filterWrapper {
+    width: 250px; 
+    flex-shrink: 0; 
+  }

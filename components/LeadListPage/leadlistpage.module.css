@@ -1,0 +1,93 @@
+
+  .leadListContainer {
+    flex-grow: 1; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .leadCard {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .leadHeader {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    /* align-items: center; */
+    margin-bottom: 10px;
+    /* flex-wrap: wrap; */
+  }
+  
+  .clientStatus {
+    background: rgb(244, 192, 96);
+    border: 1px solid orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .leadDetails p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #555;
+    /* max-width: 70%; */
+  }
+  
+  .leadButton {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .leadButton:hover {
+    background: #0056b3;
+  }
+  
+ .leadHeader h4 {
+    max-width: 100%;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: inline-block;
+    width: 150px; 
+  }
+  
+  .leadInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .clientIcon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
