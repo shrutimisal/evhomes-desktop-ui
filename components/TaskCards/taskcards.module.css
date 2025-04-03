@@ -2,17 +2,21 @@
   background-color: white;
   color: black;
   width: 500px;
-  height: 330px;
-  margin-left: 20px;
+  height: 250px;
   padding: 10px;
   border-radius: 10px;
   border: 2px solid rgb(223, 220, 220);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
   
 }
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
 
 .heading {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -22,7 +26,7 @@
   flex-direction: column;
   gap: 10px;
   overflow-y: auto;
-  max-height: 270px;
+  max-height: 250px;
   scrollbar-width: none;
 }
 .taskList::-webkit-scrollbar {

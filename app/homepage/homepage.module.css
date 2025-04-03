@@ -1,4 +1,9 @@
-.linePieContainer{
+.lineTaskContainer{
     display: flex;
     padding-top: 30px;
+}
+
+.ReminPieContainer{
+    display: flex;
+    padding-top: 20px;
 }
