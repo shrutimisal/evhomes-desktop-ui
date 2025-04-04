@@ -8,3 +8,7 @@
     width: 250px; 
     flex-shrink: 0; 
   }
+
+  .leadContainer{
+    width: 350px;
+  }

@@ -8,10 +8,8 @@ const LeadsPage = () => {
   return (
     <div>
       <Leaddashboardcards />
-      <div className={styles.filleadlistContainer}>
-        <div className={styles.filterWrapper}>
-          <FilterCard />
-        </div>
+
+      <div className={styles.leadContainer}>
         <Leadlistpage />
       </div>
     </div>
