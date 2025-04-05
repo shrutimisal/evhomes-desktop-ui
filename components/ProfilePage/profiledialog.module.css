@@ -1,0 +1,195 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  z-index: 1000;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  width: 800px;
+  height: 500px;
+  border-radius: 8px;
+  position: relative;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 2px solid #999;
+}
+
+.userInfo {
+  text-align: center;
+}
+
+.userName {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.userDesignation {
+  font-size: 14px;
+  color: #666;
+}
+
+.personalInfoSection {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 400px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.sectionHeading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.infoRow {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #444;
+  gap: 10px;
+}
+
+.infoRow span:first-child {
+  font-weight: 500;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 10px;
+}
+
+.perRepoContainer {
+  display: flex;
+}
+
+.reportingInfoSection {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 200px;
+  height: 100px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.repoSectionHeading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+.repoSection {
+  display: flex;
+  gap: 10px;
+}
+
+.reportingToImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 2px solid #999;
+}
+
+.repoInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.repoContContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactInfoSection {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 200px;
+  height: 100px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.contSectionHeading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.rightSection {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.leaveInfoSection {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.leaveSectionHeading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  color: #333;
+}
