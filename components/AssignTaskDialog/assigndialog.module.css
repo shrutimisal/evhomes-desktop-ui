@@ -68,6 +68,11 @@
   font-size: 14px;
 }
 
+.formControl input {
+  padding: 10px;
+  font-size: 14px;
+}
+
 .dateInputWrapper {
   position: relative;
   display: flex;
