@@ -3,15 +3,43 @@ import React, { useState } from "react";
 import styles from "./leaddetailspage.module.css";
 import { FaTasks, FaBell, FaCalendarAlt, FaRocket } from "react-icons/fa";
 import Assigndialog from "../AssignTaskDialog/Assigndialog";
+import Sendnotificationdialog from "../SendNotificationDialog/Sendnotificationdialog";
+import Schedulemeetingdialog from "../ScheduleMeetingDialog/Schedulemeetingdialog";
+import Leadrunningstatusdialog from "../LeadRunningStatusDialog/Leadrunningstatusdialog";
 
 const Leaddetailspage = () => {
-  const[showDialog, setShowDialog] = useState(false);
-const handleAssignClick=()=>{
-  setShowDialog(true);
-}
-const closeDialog=()=>{
-  setShowDialog(false);
-}
+  const [showDialog, setShowDialog] = useState(false);
+  const [showNotificationDialog, setShowNotificationDialog] = useState(false);
+  const [showScheduleMeetingDialog, setShowScheduleMeetingDialog] = useState(false);
+  const [showLeadRunningStatusDialog, setShowLeadRunningStatusDialog] = useState(false);
+
+  const handleAssignClick = () => {
+    setShowDialog(true);
+  };
+  const closeDialog = () => {
+    setShowDialog(false);
+  };
+  
+  const handleNotificationClick = () => {
+    setShowNotificationDialog(true);
+  };
+  const closeNotificationDialog = () => {
+    setShowNotificationDialog(false);
+  };
+
+  const handleScheduleMeetingClick = () => {
+    setShowScheduleMeetingDialog(true);
+  };
+  const closeScheduleMeeetingDialog = () => {
+    setShowScheduleMeetingDialog(false);
+  };
+
+  const handleLeadRunningStatusClick = () => {
+    setShowLeadRunningStatusDialog(true);
+  };
+  const closeLeadRunningStatusDialog = () => {
+    setShowLeadRunningStatusDialog(false);
+  };
 
   return (
     <div className={styles.sectionContainer}>
@@ -82,19 +110,28 @@ const closeDialog=()=>{
           <FaTasks className={styles.icon} />
           Assign Task
         </button>
-        {showDialog && <Assigndialog onClose={closeDialog}/>}
-        <button className={styles.actionButton}>
+        {showDialog && <Assigndialog onClose={closeDialog} />}
+
+        <button className={styles.actionButton} onClick={handleNotificationClick}>
           <FaBell className={styles.icon} />
           Send Notification
         </button>
-        <button className={styles.actionButton}>
+        {showNotificationDialog && <Sendnotificationdialog onClose={closeNotificationDialog}/>}
+
+
+        <button className={styles.actionButton} onClick={handleScheduleMeetingClick}>
           <FaCalendarAlt className={styles.icon} />
           Schedule Meeting
         </button>
-        <button className={styles.actionButton}>
+        {showScheduleMeetingDialog && <Schedulemeetingdialog onClose={closeScheduleMeeetingDialog}/>}
+
+        <button className={styles.actionButton} onClick={handleLeadRunningStatusClick}>
           <FaRocket className={styles.icon} />
           Lead Running Status
         </button>
+        {showLeadRunningStatusDialog && <Leadrunningstatusdialog onClose={closeLeadRunningStatusDialog}/>}
+
+        
       </div>
     </div>
   );
