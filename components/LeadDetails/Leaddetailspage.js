@@ -1,8 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./leaddetailspage.module.css";
 import { FaTasks, FaBell, FaCalendarAlt, FaRocket } from "react-icons/fa";
+import Assigndialog from "../AssignTaskDialog/Assigndialog";
 
 const Leaddetailspage = () => {
+  const[showDialog, setShowDialog] = useState(false);
+const handleAssignClick=()=>{
+  setShowDialog(true);
+}
+const closeDialog=()=>{
+  setShowDialog(false);
+}
+
   return (
     <div className={styles.sectionContainer}>
       <div className={styles.detailsContainer}>
@@ -68,10 +78,11 @@ const Leaddetailspage = () => {
       {/* four Buttons  */}
 
       <div className={styles.buttonColumn}>
-        <button className={styles.actionButton}>
+        <button className={styles.actionButton} onClick={handleAssignClick}>
           <FaTasks className={styles.icon} />
           Assign Task
         </button>
+        {showDialog && <Assigndialog onClose={closeDialog}/>}
         <button className={styles.actionButton}>
           <FaBell className={styles.icon} />
           Send Notification
