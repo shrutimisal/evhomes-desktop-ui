@@ -9,6 +9,13 @@
     flex-shrink: 0; 
   }
 
-  .leadContainer{
-    width: 350px;
+  .listDetailsContainer{
+    display: flex;
+  }
+  .listContainer{
+    width: 320px;
+  }
+
+  .fullContainer{
+    background-color: #333;
   }
