@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./navbar.module.css";
 import { FaBell, FaUserCircle } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
+import Profiledialog from "../ProfilePage/Profiledialog";
 
 const Navbar = () => {
   const pathname = usePathname();
   const router = useRouter();
+  const [isProfileOpen,setIsProfileOpen] = useState(false);
 
   const navigateTo = (path) => {
     router.push(path);
@@ -57,8 +59,10 @@ const Navbar = () => {
       </ul>
       <div className={styles.icons}>
         <FaBell className={styles.icon} />
-        <FaUserCircle className={styles.icon} />
+        <FaUserCircle className={styles.icon} onClick={()=> setIsProfileOpen(true)} />
       </div>
+
+      <Profiledialog isOpen={isProfileOpen} onClose={()=>setIsProfileOpen(false)}/>
     </nav>
   );
 };
