@@ -80,7 +80,7 @@
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 12px;
-  color: #333;
+  color: #010a70;
   border-bottom: 1px solid #ccc;
   padding-bottom: 4px;
 }
@@ -119,14 +119,7 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-.repoSectionHeading {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #333;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-}
+
 .repoSection {
   display: flex;
   gap: 10px;
@@ -162,14 +155,6 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-.contSectionHeading {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #333;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-}
 
 .rightSection {
   width: 75%;
@@ -179,17 +164,52 @@
 }
 
 .leaveInfoSection {
+  margin-left: 20px;
   background-color: white;
   padding: 15px 20px;
   border-radius: 8px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-.leaveSectionHeading {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-  color: #333;
+
+.profileActions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.editButton,
+.changePassButton {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  width: 160px;
+  height: 60px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.editButton {
+  background-color: orange;
+}
+
+.editButton:hover {
+  background-color: darkorange;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 165, 0, 0.4);
+}
+
+.changePassButton {
+  background-color: rgb(69, 193, 235);
+}
+
+.changePassButton:hover {
+  background-color: rgb(50, 170, 210);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(69, 193, 235, 0.4);
 }
