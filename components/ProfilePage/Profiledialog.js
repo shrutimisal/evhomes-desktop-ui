@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./profiledialog.module.css";
 
 const Profiledialog = ({ isOpen, onClose }) => {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
