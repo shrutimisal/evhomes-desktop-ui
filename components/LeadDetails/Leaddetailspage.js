@@ -6,6 +6,7 @@ import Assigndialog from "../AssignTaskDialog/Assigndialog";
 import Sendnotificationdialog from "../SendNotificationDialog/Sendnotificationdialog";
 import Schedulemeetingdialog from "../ScheduleMeetingDialog/Schedulemeetingdialog";
 import Leadrunningstatusdialog from "../LeadRunningStatusDialog/Leadrunningstatusdialog";
+import Leadshistory from "../LeadsHistory/Leadshistory";
 
 const Leaddetailspage = () => {
   const [showDialog, setShowDialog] = useState(false);
@@ -43,6 +44,8 @@ const Leaddetailspage = () => {
 
   return (
     <div className={styles.sectionContainer}>
+      <div className={styles.leadHistoryContainer}>
+
       <div className={styles.detailsContainer}>
         <div className={styles.leftSection}>
           <div className={styles.avatar}>D</div>
@@ -102,6 +105,9 @@ const Leaddetailspage = () => {
           </p>
           <div className={styles.options}></div>
         </div>
+      </div>
+
+      <Leadshistory/>
       </div>
       {/* four Buttons  */}
 

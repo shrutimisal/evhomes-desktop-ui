@@ -4,6 +4,7 @@ import Leaddashboardcards from "@/components/LeadsDashboardCards/Leaddashboardca
 import React from "react";
 import styles from "./leads.module.css";
 import Leaddetailspage from "@/components/LeadDetails/Leaddetailspage";
+import Leadshistory from "@/components/LeadsHistory/Leadshistory";
 
 const LeadsPage = () => {
   return (
@@ -12,7 +13,10 @@ const LeadsPage = () => {
 
       <div className={styles.listDetailsContainer}>
         <div className={styles.listContainer}><Leadlistpage /></div>
+        <div className={styles.listHistoryContainer}>
         <Leaddetailspage/>
+        
+        </div>
       </div>
     </div>
   );
