@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../AssignTaskDialog/assigndialog.module.css";
 
 const Schedulemeetingdialog = ({ onClose }) => {
+  const [isClosing, setIsClosing] = useState(false);
+  const handleClose = () => {
+    setIsClosing(true);
+  };
+
+  useEffect(() => {
+    if (isClosing) {
+      const timeout = setTimeout(() => {
+        onClose();
+      }, 300);
+    }
+  }, [isClosing, onClose]);
+
   return (
-    <div className={styles.dialogOverlay} onClick={onClose}>
+    <div className={styles.dialogOverlay} onClick={handleClose}>
       <div
-        className={styles.dialogContainer}
+        className={`${styles.dialogContainer} ${
+          isClosing ? styles.slideOut : ""
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className={styles.closeButton} onClick={onClose}></button>
+        <button className={styles.closeButton} onClick={handleClose}></button>
         <h2>Schedule Meeting</h2>
       </div>
     </div>
