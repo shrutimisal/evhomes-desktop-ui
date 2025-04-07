@@ -19,3 +19,8 @@
   .fullContainer{
     background-color: #333;
   }
+
+  .listHistoryContainer{
+  display: flex;
+  flex-direction: column;
+  }
