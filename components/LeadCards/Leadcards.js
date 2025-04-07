@@ -1,16 +1,17 @@
 import { BarChart, MapPin, Repeat, CheckSquare, Clock } from "lucide-react";
 import styles from "./leadcards.module.css";
+import Link from "next/link";
 
 const Leadcards = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
+      <Link href="/leads" className={styles.card}>
         <div className={styles.text}>
           <h4>Leads</h4>
           <h2>16689</h2>
         </div>
         <BarChart className={`${styles.icon} ${styles.blue}`} />
-      </div>
+      </Link>
       <div className={styles.card}>
         <div className={styles.text}>
           <h4>Visit 1</h4>

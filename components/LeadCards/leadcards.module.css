@@ -21,7 +21,8 @@
     position: relative;
     top: 20px;
     height: 70px;
-    
+    text-decoration: none;
+    color: inherit;
   }
   
   .card h4 {
