@@ -10,19 +10,23 @@ const Profiledialog = ({ isOpen, onClose }) => {
         <button className={styles.closeButton} onClick={onClose}></button>
 
         <div className={styles.profileContainer}>
-          {/* Profile section (left side) */}
+          {/* Profile sectionn */}
           <div className={styles.profileSection}>
             <div className={styles.profileImage}></div>
             <div className={styles.userInfo}>
               <div className={styles.userName}>User Name</div>
               <div className={styles.userDesignation}>User Designation</div>
             </div>
+
+            <div className={styles.profileActions}>
+              <button className={styles.editButton}>Edit Profile</button>
+              <button className={styles.changePassButton}>Change Password</button>
+            </div>
           </div>
 
-          {/* Right-hand content */}
           <div className={styles.rightSection}>
             <div className={styles.perRepoContainer}>
-              {/* Personal Info */}
+              {/* Personal Inf */}
               <div className={styles.personalInfoSection}>
                 <h3 className={styles.sectionHeading}>Personal Information</h3>
                 <div className={styles.infoRow}>
@@ -48,10 +52,10 @@ const Profiledialog = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              {/* Reporting + Contact Info */}
+              {/* Repo & Contact Info */}
               <div className={styles.repoContContainer}>
                 <div className={styles.reportingInfoSection}>
-                  <h3 className={styles.repoSectionHeading}>Reporting To</h3>
+                  <h3 className={styles.sectionHeading}>Reporting To</h3>
                   <div className={styles.repoSection}>
                     <div className={styles.reportingToImage}></div>
                     <div className={styles.repoInfo}>
@@ -61,7 +65,7 @@ const Profiledialog = ({ isOpen, onClose }) => {
                   </div>
                 </div>
                 <div className={styles.contactInfoSection}>
-                  <h3 className={styles.contSectionHeading}>
+                  <h3 className={styles.sectionHeading}>
                     Contact Information
                   </h3>
                   <div className={styles.infoRow}>
@@ -74,9 +78,9 @@ const Profiledialog = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Leave Information Section (bottom right) */}
+            {/* Leave Info */}
             <div className={styles.leaveInfoSection}>
-              <h3 className={styles.leaveSectionHeading}>Leave Information</h3>
+              <h3 className={styles.sectionHeading}>Leave Information</h3>
               <div className={styles.infoRow}>
                 <span>Paid Leave : </span> <span>10</span>
               </div>
