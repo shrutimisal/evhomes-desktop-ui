@@ -15,7 +15,7 @@ const Taskcards = () => {
 
   return (
     <div className={styles.card}>
-      <h2 className={styles.heading}>Tasks</h2>
+      <h2 className={styles.heading}>Upcoming Tasks</h2>
       <div className={styles.taskContainer}>
         <div className={styles.taskList}>
           {tasks.map((task, index) => (
