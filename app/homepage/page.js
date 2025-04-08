@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <div>
       <Leadcards />
-      <Extraoptions />
+      {/* <Extraoptions /> */}
       <div className={styles.lineTaskContainer}>
         <Linegraphcard />
         <Taskcards />
