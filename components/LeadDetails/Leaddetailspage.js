@@ -2,12 +2,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./leaddetailspage.module.css";
 import { FaTasks, FaBell, FaCalendarAlt, FaRocket } from "react-icons/fa";
-import Assigndialog from "../AssignTaskDialog/Assigndialog";
-import Sendnotificationdialog from "../SendNotificationDialog/Sendnotificationdialog";
-import Schedulemeetingdialog from "../ScheduleMeetingDialog/Schedulemeetingdialog";
-import Leadrunningstatusdialog from "../LeadRunningStatusDialog/Leadrunningstatusdialog";
+import Sendnotificationdialog from "../Dialogs/Sendnotificationdialog";
+import Schedulemeetingdialog from "../Dialogs/Schedulemeetingdialog";
+import Leadrunningstatusdialog from "../Dialogs/Leadrunningstatusdialog";
 import Leadshistory from "../LeadsHistory/Leadshistory";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import Assigndialog from "../Dialogs/Assigndialog";
 
 const Leaddetailspage = () => {
   const [showDropdown, setShowDropdown] = useState(false);

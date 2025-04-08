@@ -58,6 +58,9 @@ const Navbar = () => {
         </li>
       </ul>
       <div className={styles.icons}>
+        <button className={styles.moreButton}>
+          More<span className={styles.plus}>+</span> 
+        </button>
         <FaBell className={styles.icon} />
         <FaUserCircle className={styles.icon} onClick={()=> setIsProfileOpen(true)} />
       </div>

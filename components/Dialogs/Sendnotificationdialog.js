@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../AssignTaskDialog/assigndialog.module.css";
+import styles from "../Dialogs/assigndialog.module.css";
 import style from "./sendnotificationdialog.module.css";
 import { GrAttachment } from "react-icons/gr";
 import { FaEye } from "react-icons/fa";
