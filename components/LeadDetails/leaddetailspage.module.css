@@ -1,5 +1,6 @@
 .detailsContainer {
   width: 800px;
+  /* border-radius: 20px; */
   max-height: 250px;
   background-color: #1a1a1aa8;
   margin: 10px;
@@ -9,6 +10,9 @@
   font-size: 13px;
   font-weight: 400;
   position: relative;
+  
+  /* clip-path: path("M 0 20 Q 0 0 20 0 H 620 Q 660 0 690 20 Q 750 50 770 90 Q 790 130 790 160 Q 790 180 770 200 Q 750 220 700 230 Q 690 230 620 230 H 20 Q 0 230 0 210 Z"); */
+
 }
 
 .leftSection {
@@ -120,12 +124,14 @@
   box-shadow: 0 0 5px #00e1ff44;
   width: 130px;
   height: 100px;
+  border:  1.5px solid #2a2a2a;
 }
 
 .actionButton:hover {
   background-color: #3a3a3a;
   transform: translateY(-1px);
-  box-shadow: 0 0 8px #00e1ff88;
+  border:  1.5px solid #0ae2fe;
+  box-shadow: 0 0 8px #00e1ff;
 }
 
 .icon {

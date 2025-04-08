@@ -12,9 +12,8 @@ import Remindercard from "@/components/ReminderCard/Remindercard";
 const HomePage = () => {
   return (
     <div>
-      {/* <Quickaccessoptions/> */}
-      {/* <Extraoptions/> */}
       <Leadcards />
+      <Extraoptions />
       <div className={styles.lineTaskContainer}>
         <Linegraphcard />
         <Taskcards />

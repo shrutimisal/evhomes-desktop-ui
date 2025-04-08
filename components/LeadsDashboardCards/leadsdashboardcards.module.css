@@ -11,6 +11,7 @@
 .title {
   color: white;
   margin-left: 20px;
+  margin-right: auto;
 }
 
 .searchContainer {
@@ -19,9 +20,8 @@
   background: #575656;
   border-radius: 10px;
   padding: 3px;
-  margin-right: 50px;
   width: 500px;
-  transition: margin-right 0.3s ease-in-out;
+  margin-right: 15px;
 }
 
 .searchInput::placeholder {
@@ -29,10 +29,6 @@
   font-size: 17px;
   font-weight: 400;
   opacity: 1;
-}
-
-.searchShift {
-  margin-right: 160px;
 }
 
 .searchInput {
@@ -55,7 +51,12 @@
   margin-right: 5px;
 }
 
-.filterContainer {
+/* Menu styles remain unchanged */
+.menuWrapper {
+  position: relative;
+}
+
+.menuIcon {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -63,17 +64,58 @@
   background: #007bff;
   padding: 8px 10px;
   border-radius: 5px;
-  transition: all 0.4s ease-in-out;
+}
+
+.menuOptions {
   position: absolute;
-  right: 20px;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
 }
 
-.filterExpanded {
-  padding: 8px 20px;
+.menuItem {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
 }
 
-.filterText {
-  margin-left: 5px;
-  margin-right: 20px;
-  transition: opacity 0.5s ease-in-out;
+.menuItem:hover {
+  background: #f2f2f2;
+}
+
+.filterSlideIn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  animation: slideIn 0.4s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark */
+  z-index: 1000;
 }
