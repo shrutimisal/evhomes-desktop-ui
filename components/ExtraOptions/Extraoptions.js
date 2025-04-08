@@ -17,6 +17,10 @@ const Extraoptions = () => {
         <FaBoxes className={styles.icon} />
         Inventory
       </button>
+      <button className={styles.button}>
+        <FaBoxes className={styles.icon} />
+        Inventory
+      </button>
     </div>
   );
 };
