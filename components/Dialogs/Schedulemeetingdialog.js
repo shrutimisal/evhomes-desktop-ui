@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "../AssignTaskDialog/assigndialog.module.css";
+import styles from "../Dialogs/assigndialog.module.css";
 
 const Schedulemeetingdialog = ({ onClose }) => {
   const [isClosing, setIsClosing] = useState(false);

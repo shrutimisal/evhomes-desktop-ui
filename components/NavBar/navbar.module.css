@@ -73,4 +73,36 @@
   .icon:hover {
     color: #f4a261;
   }
+  .moreButton {
+    background-color: rgba(255, 255, 255, 0.05); 
+    /* border: 1px solid #f4a261; */
+    border: 1.5px solid white;
+
+    /* color: #f4a261; */
+    color: white;
+    padding: 1px 5px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    gap: 5px;
+  }
+  
+  .moreButton:hover {
+    background-color: #f4a261;
+    color: #1a1a1a;
+    box-shadow: 0 0 8px rgba(244, 162, 97, 0.5);
+  }
+  
+  .plus {
+    font-weight: bold;
+    margin-left: 4px;
+    font-size: 17px;
+  }
+  
   
