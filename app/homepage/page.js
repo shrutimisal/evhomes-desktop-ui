@@ -17,6 +17,7 @@ const HomePage = () => {
       <div className={styles.lineTaskContainer}>
         <Linegraphcard />
         <Taskcards />
+        <Extraoptions/>
       </div>
       <div className={styles.ReminPieContainer}>
         <Remindercard />
