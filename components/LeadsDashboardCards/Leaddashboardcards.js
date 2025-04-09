@@ -3,12 +3,15 @@ import React, { useState, useRef, useEffect } from "react";
 import { FiSearch, FiMenu, FiX } from "react-icons/fi";
 import styles from "./leadsdashboardcards.module.css";
 import { FilterCard } from "../FilterCard/Filtercard";
-
+import useBodyScrollLock from "../useBodyScrollLock";
 
 const Leaddashboardcards = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showFilter, setShowFilter] = useState(false);
   const containerRef = useRef(null);
+
+  const isAnyFilterOpen = showFilter;
+  useBodyScrollLock(isAnyFilterOpen);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const toggleFilter = () => setShowFilter((prev) => !prev);
@@ -26,14 +29,6 @@ const Leaddashboardcards = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  useEffect(() => {
-    if (showFilter) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [showFilter]);
 
   return (
     <div className={styles.container} ref={containerRef}>
