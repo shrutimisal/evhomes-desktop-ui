@@ -8,6 +8,7 @@ import Leadrunningstatusdialog from "../Dialogs/Leadrunningstatusdialog";
 import Leadshistory from "../LeadsHistory/Leadshistory";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import Assigndialog from "../Dialogs/Assigndialog";
+import useBodyScrollLock from "../useBodyScrollLock";
 
 const Leaddetailspage = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -20,6 +21,13 @@ const Leaddetailspage = () => {
 
   const dropdownRef = useRef(null);
 
+  const isAnyDialogOpen =
+    showDialog ||
+    showNotificationDialog ||
+    showScheduleMeetingDialog ||
+    showLeadRunningStatusDialog;
+  useBodyScrollLock(isAnyDialogOpen);
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {

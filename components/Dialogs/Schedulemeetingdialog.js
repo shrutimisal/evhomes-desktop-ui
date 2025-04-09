@@ -8,6 +8,7 @@ const Schedulemeetingdialog = ({ onClose }) => {
   const [hour, setHour] = useState(new Date().getHours());
   const [minute, setMinute] = useState(new Date().getMinutes());
   const [is24Hour, setIs24Hour] = useState(true);
+  const [amPm, setAmPm] = useState(new Date().getHours() >= 12 ? "PM" : "AM");
 
   const hourRef = useRef(null);
   const minuteRef = useRef(null);
@@ -43,13 +44,22 @@ const Schedulemeetingdialog = ({ onClose }) => {
     const index = Math.round(
       (scrollTop + ref.current.clientHeight / 2 - itemHeight / 2) / itemHeight
     );
-
     setter(index);
   };
 
   const handleConfirm = () => {
     const selected = new Date(date);
-    selected.setHours(hour);
+    let adjustedHour = hour;
+
+    if (!is24Hour) {
+      if (amPm === "PM" && hour < 12) {
+        adjustedHour += 12;
+      } else if (amPm === "AM" && hour === 12) {
+        adjustedHour = 0;
+      }
+    }
+
+    selected.setHours(adjustedHour);
     selected.setMinutes(minute);
     console.log("Selected Date & Time:", selected.toString());
     onClose();
@@ -57,14 +67,18 @@ const Schedulemeetingdialog = ({ onClose }) => {
 
   const formatTime = (h, m) => {
     if (!is24Hour) {
-      const suffix = h >= 12 ? "PM" : "AM";
-      h = h % 12 || 12;
-      return `${String(h).padStart(2, "0")}:${String(m).padStart(
+      const displayHour = h % 12 || 12;
+      return `${String(displayHour).padStart(2, "0")}:${String(m).padStart(
         2,
         "0"
-      )} ${suffix}`;
+      )} ${amPm}`;
     }
     return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+  };
+
+  const handleAmPmChange = (e) => {
+    const value = e.target.value;
+    setAmPm(value);
   };
 
   return (
@@ -76,7 +90,8 @@ const Schedulemeetingdialog = ({ onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button className={styles.closeButton} onClick={handleClose}></button>
-        <h2>Select Date & Time</h2>
+        <h2>Schedule Meeting</h2>
+        <p>Select Date & Time</p>
 
         <div className={style.timePickerWrapper}>
           <label>
@@ -127,6 +142,17 @@ const Schedulemeetingdialog = ({ onClose }) => {
                 ))}
               </div>
             </div>
+
+            {!is24Hour && (
+              <select
+                value={amPm}
+                onChange={handleAmPmChange}
+                className={style.ampmDropdown}
+              >
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+              </select>
+            )}
           </div>
 
           <label>
