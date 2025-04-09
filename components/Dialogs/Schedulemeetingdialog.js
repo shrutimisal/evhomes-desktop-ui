@@ -123,7 +123,7 @@ const Schedulemeetingdialog = ({ onClose }) => {
                 ))}
               </div>
             </div>
-
+            <div><h2>:</h2></div>
             <div
               className={style.wheelWrapper}
               ref={minuteRef}

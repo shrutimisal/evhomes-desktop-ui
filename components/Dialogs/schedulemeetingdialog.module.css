@@ -33,6 +33,7 @@
 
   .timeContainer{
     display: flex;
+    align-items: center;
   }
   
 

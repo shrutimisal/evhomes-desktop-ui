@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding-top: 60px;
   font-family: "Poppins", sans-serif;
+  
 }
 
 .container {
@@ -20,4 +21,6 @@ body {
   padding: 0px 0px;
   width: 100%;
   box-sizing: border-box;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
