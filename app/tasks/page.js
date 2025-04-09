@@ -1,9 +1,20 @@
 import React from 'react'
-import styles from "./taskpage.module.css";
+import styles from "../leads/leads.module.css";
+import TaskDashboardCard from '@/components/TasksDashboard/Taskcard';
+import TaskList from '@/components/TasksDashboard/Tasklist';
 
 const TasksPage = () => {
   return (
-    <div className={styles.fullContainer}>TasksPage</div>
+    <div className={styles.fullContainer}>
+    <TaskDashboardCard/>
+    <div className={styles.listDetailsContainer}>
+        <div className={styles.listContainer}><TaskList /></div>
+        <div className={styles.listHistoryContainer}>
+        {/* <Leaddetailspage/> */}
+        
+        </div>
+      </div>
+    </div>
   );
 };
 
