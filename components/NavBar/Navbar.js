@@ -40,11 +40,18 @@ const Navbar = () => {
         {user ? (
           <>
             <li
+              className={pathname === "/dashboard" ? styles.active : ""}
+              onClick={() => navigateTo("/dashboard")}
+            >
+              Dashboard
+            </li>
+            <li
               className={pathname === "/leads" ? styles.active : ""}
               onClick={() => navigateTo("/leads")}
             >
               Leads
             </li>
+
             <li
               className={pathname === "/tasks" ? styles.active : ""}
               onClick={() => navigateTo("/tasks")}

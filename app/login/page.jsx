@@ -18,7 +18,7 @@ export default function LoginPage() {
 
     if (result.success) {
       alert("Logged in!");
-      redirect("/homepage");
+      redirect("/dashboard");
       // redirect or do something
     } else {
       alert(result.message);

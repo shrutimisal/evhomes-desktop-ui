@@ -9,7 +9,7 @@ import Extraoptions from "@/components/ExtraOptions/Extraoptions";
 import Taskcards from "@/components/TaskCards/Taskcards";
 import Remindercard from "@/components/ReminderCard/Remindercard";
 
-const HomePage = () => {
+const Dashboard = () => {
   return (
     <div>
       <Leadcards />
@@ -17,7 +17,7 @@ const HomePage = () => {
       <div className={styles.lineTaskContainer}>
         <Linegraphcard />
         <Taskcards />
-        <Extraoptions/>
+        <Extraoptions />
       </div>
       <div className={styles.ReminPieContainer}>
         <Remindercard />
@@ -27,4 +27,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Dashboard;
