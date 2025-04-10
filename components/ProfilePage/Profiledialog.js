@@ -1,7 +1,27 @@
+"use client";
+
 import React, { useEffect } from "react";
 import styles from "./profiledialog.module.css";
+import { useUser } from "@/context/UserContext";
+import { useRouter } from "next/navigation";
 
 const Profiledialog = ({ isOpen, onClose }) => {
+  const { logout } = useUser();
+  const router = useRouter();
+
+  const navigateTo = (path) => {
+    router.push(path);
+  };
+
+  const onClickLogout = () => {
+    const confirmLogout = window.confirm("Are you sure you want to logout?");
+    if (confirmLogout) {
+      logout();
+      navigateTo("/");
+      onClose();
+    }
+  };
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -32,7 +52,12 @@ const Profiledialog = ({ isOpen, onClose }) => {
 
             <div className={styles.profileActions}>
               <button className={styles.editButton}>Edit Profile</button>
-              <button className={styles.changePassButton}>Change Password</button>
+              <button className={styles.changePassButton}>
+                Change Password
+              </button>
+              <button className={styles.logooutButton} onClick={onClickLogout}>
+                Logout
+              </button>
             </div>
           </div>
 
@@ -77,9 +102,7 @@ const Profiledialog = ({ isOpen, onClose }) => {
                   </div>
                 </div>
                 <div className={styles.contactInfoSection}>
-                  <h3 className={styles.sectionHeading}>
-                    Contact Information
-                  </h3>
+                  <h3 className={styles.sectionHeading}>Contact Information</h3>
                   <div className={styles.infoRow}>
                     <span>Phone Number : </span> <span>123456789</span>
                   </div>
