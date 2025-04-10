@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./extraoptions.module.css";
-import { FaFileInvoiceDollar, FaCalendarAlt, FaBoxes } from "react-icons/fa";
+import { FaFileInvoiceDollar, FaCalendarAlt, FaBoxes,FaRegWindowRestore } from "react-icons/fa";
 
 const Extraoptions = () => {
   return (
@@ -18,8 +18,8 @@ const Extraoptions = () => {
         Inventory
       </button>
       <button className={styles.button}>
-        <FaBoxes className={styles.icon} />
-        Inventory
+        <FaRegWindowRestore className={styles.icon} />
+        Line Up
       </button>
     </div>
   );
