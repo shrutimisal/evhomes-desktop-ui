@@ -91,9 +91,9 @@ const Navbar = () => {
       <div className={styles.icons}>
         {user ? (
           <>
-            <button className={styles.moreButton}>
+            {/* <button className={styles.moreButton}>
               More<span className={styles.plus}>+</span>
-            </button>
+            </button> */}
             <FaBell className={styles.icon} />
             <FaUserCircle
               className={styles.icon}

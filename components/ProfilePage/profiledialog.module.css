@@ -8,19 +8,21 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 80px;
+  padding-top: 50px;
   z-index: 1000;
 }
 
 .container {
   background: white;
   padding: 20px;
-  width: 800px;
-  height: 500px;
-  border-radius: 8px;
+  width: 860px;
+  height: 530px;
+  border-radius: 12px;
   position: relative;
   margin-left: auto;
   margin-right: 50px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
 
 .closeButton {
@@ -66,31 +68,66 @@
   color: #666;
 }
 
+.personalInfoSection,
+.reportingInfoSection,
+.contactInfoSection,
+.leaveInfoSection {
+  background: linear-gradient(to top left, #f9f9f9, #ffffff);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.personalInfoSection:hover,
+.reportingInfoSection:hover,
+.contactInfoSection:hover,
+.leaveInfoSection:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
 .personalInfoSection {
-  background-color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
   margin-left: 20px;
   margin-right: 20px;
   width: 400px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.reportingInfoSection,
+.contactInfoSection {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 250px;
+  height: 100px;
+}
+
+.leaveInfoSection {
+  margin-left: 20px;
 }
 
 .sectionHeading {
   font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #010a70;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #002b70;
+  border-left: 4px solid #002b70;
+  padding-left: 10px;
+  background-color: #e8f0ff;
+  border-radius: 4px;
 }
 
 .infoRow {
   display: flex;
-  margin-bottom: 8px;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ccc;
   font-size: 14px;
   color: #444;
   gap: 10px;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
 }
 
 .infoRow span:first-child {
@@ -106,17 +143,6 @@
 
 .perRepoContainer {
   display: flex;
-}
-
-.reportingInfoSection {
-  background-color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 200px;
-  height: 100px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 .repoSection {
@@ -143,17 +169,6 @@
   gap: 20px;
 }
 
-.contactInfoSection {
-  background-color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 200px;
-  height: 100px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-}
-
 .rightSection {
   width: 75%;
   display: flex;
@@ -161,66 +176,90 @@
   gap: 20px;
 }
 
-.leaveInfoSection {
-  margin-left: 20px;
-  background-color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-}
 
 .profileActions {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.customButtonOrange,
+.customButtonBlue,
+.customButtonRed {
+  display: flex;
   align-items: center;
-}
-
-.editButton,
-.changePassButton {
-  padding: 10px 20px;
-  color: white;
-  border: none;
-  border-radius: 12px;
+  gap: 8px;
   cursor: pointer;
-  font-size: 17px;
-  width: 160px;
-  height: 60px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  padding: 6px 12px;
+  width: 140px;
+  transition: 0.3s ease;
 }
 
-.logooutButton {
-  padding: 10px 20px;
-  color: white;
-  background-color: rgb(255, 0, 0);
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 17px;
-  width: 160px;
-  height: 60px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.customButtonOrange {
+  border: 2px solid orange;
+  background-color: rgba(255, 165, 0, 0.1);
+}
+.customButtonOrange:hover {
+  background-color: rgba(255, 165, 0, 0.2);
 }
 
-.editButton {
-  background-color: orange;
+.customButtonBlue {
+  border: 2px solid #2196f3;
+  background-color: rgba(33, 150, 243, 0.1);
+}
+.customButtonBlue:hover {
+  background-color: rgba(33, 150, 243, 0.2);
 }
 
-.editButton:hover {
-  background-color: darkorange;
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(255, 165, 0, 0.4);
+.customButtonRed {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.customButtonRed:hover {
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
-.changePassButton {
-  background-color: rgb(69, 193, 235);
+.iconCircleOrange,
+.iconCircleBlue,
+.iconCircleRed {
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
-.changePassButton:hover {
-  background-color: rgb(50, 170, 210);
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(69, 193, 235, 0.4);
+.iconCircleOrange {
+  border: 2px solid orange;
+  color: orange;
+}
+.iconCircleBlue {
+  border: 2px solid #2196f3;
+  color: #2196f3;
+}
+.iconCircleRed {
+  border: 2px solid red;
+  color: red;
+}
+
+.textBoxOrange,
+.textBoxBlue,
+.textBoxRed {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.textBoxOrange {
+  color: orange;
+}
+.textBoxBlue {
+  color: #2196f3;
+}
+.textBoxRed {
+  color: red;
 }

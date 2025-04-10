@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import styles from "./profiledialog.module.css";
+import { FaUserEdit, FaKey, FaSignOutAlt } from "react-icons/fa";
 import { useUser } from "@/context/UserContext";
 import { useRouter } from "next/navigation";
 
@@ -64,13 +65,26 @@ const Profiledialog = ({ isOpen, onClose }) => {
             </div>
 
             <div className={styles.profileActions}>
-              <button className={styles.editButton}>Edit Profile</button>
-              <button className={styles.changePassButton}>
-                Change Password
-              </button>
-              <button className={styles.logooutButton} onClick={onClickLogout}>
-                Logout
-              </button>
+              <div className={styles.customButtonOrange}>
+                <div className={styles.iconCircleOrange}>
+                  <FaUserEdit />
+                </div>
+                <div className={styles.textBoxOrange}>Edit Profile</div>
+              </div>
+
+              <div className={styles.customButtonBlue}>
+                <div className={styles.iconCircleBlue}>
+                  <FaKey />
+                </div>
+                <div className={styles.textBoxBlue}>Change Password</div>
+              </div>
+
+              <div className={styles.customButtonRed} onClick={onClickLogout}>
+                <div className={styles.iconCircleRed}>
+                  <FaSignOutAlt />
+                </div>
+                <div className={styles.textBoxRed}>Logout</div>
+              </div>
             </div>
           </div>
 
