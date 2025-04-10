@@ -132,3 +132,8 @@
   background-color: #f44336;
   color: white;
 }
+
+.dialogContainer h2,
+.dialogContainer label {
+  color: black !important;
+}

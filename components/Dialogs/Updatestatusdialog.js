@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./assigndialog.module.css";
-import style from "./updatestatusdialog.module.css";
 
 const Updatestatusdialog = ({ onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
@@ -54,9 +53,9 @@ const Updatestatusdialog = ({ onClose }) => {
         </div>
         <div className={styles.formControl}>
           <label>Reminder Date & Time</label>
-          <div className={style.dateTimeGroup}>
+          <div>
             <div className={styles.formControl}>
-              <label className={style.subLabel}>Select Reminder Date</label>
+              <label>Select Reminder Date</label>
               <input
                 type="date"
                 value={selectedDate}
@@ -68,8 +67,8 @@ const Updatestatusdialog = ({ onClose }) => {
                 }}
               />
             </div>
-            <div  className={styles.formControl}>
-              <label className={style.subLabel}>Select Reminder Time</label>
+            <div className={styles.formControl}>
+              <label>Select Reminder Time</label>
               <input
                 type="time"
                 value={selectedTime}
@@ -78,9 +77,7 @@ const Updatestatusdialog = ({ onClose }) => {
               />
             </div>
           </div>
-          {selectedDate && selectedTime && (
-            <div className={style.previewText}>{formatDisplayDateTime()}</div>
-          )}
+          {selectedDate && selectedTime && <div>{formatDisplayDateTime()}</div>}
         </div>
         <div className={styles.formControl}>
           <label htmlFor="text">Feedback</label>
