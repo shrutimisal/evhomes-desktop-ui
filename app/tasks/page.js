@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "../leads/leads.module.css";
 import TaskDashboardCard from '@/components/TasksDashboard/Taskcard';
 import TaskList from '@/components/TasksDashboard/Tasklist';
+import Taskdetailspage from '@/components/TasksDashboard/Taskdetail';
 
 const TasksPage = () => {
   return (
@@ -10,7 +11,7 @@ const TasksPage = () => {
     <div className={styles.listDetailsContainer}>
         <div className={styles.listContainer}><TaskList /></div>
         <div className={styles.listHistoryContainer}>
-        {/* <Leaddetailspage/> */}
+        <Taskdetailspage/>
         
         </div>
       </div>
