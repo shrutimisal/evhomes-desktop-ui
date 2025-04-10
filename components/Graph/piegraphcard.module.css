@@ -4,12 +4,17 @@
     align-items: center;
     gap: 20px;
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 30px;
+    background-color:rgb(233, 225, 225);
+    border-radius: 8px;
+    
   }
+
   
   .chartWrapper {
     text-align: center;
-    padding: 10px;
+    padding: 5px;
+   
    
   }
   
@@ -17,5 +22,11 @@
     font-size: 16px;
     font-weight: bold;
     /* margin-bottom: 12px; */
+  }
+  .header{
+   font-size: 15;
+  font-weight: bold;
+  padding: 10px;
+ 
   }
   
