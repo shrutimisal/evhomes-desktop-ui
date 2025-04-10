@@ -7,17 +7,18 @@ import useBodyScrollLock from "../useBodyScrollLock";
 import Taskhistory from "./Taskhistory";
 import Updatestatusdialog from "../Dialogs/Updatestatusdialog";
 import Setreminderdialog from "../Dialogs/Setreminderdialog";
+import Transfertaskdialog from "../Dialogs/Transfertaskdialog";
 
 const Taskdetailspage = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
   const [showNotificationDialog, setShowNotificationDialog] = useState(false);
-
+  const [showTransferTaskDialog, setShowTransferTaskDialog] = useState(false);
   const dropdownRef = useRef(null);
 
   const isAnyDialogOpen =
-    showDialog || showNotificationDialog;
-    useBodyScrollLock(isAnyDialogOpen);
+    showDialog || showNotificationDialog || showTransferTaskDialog;
+  useBodyScrollLock(isAnyDialogOpen);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -31,6 +32,13 @@ const Taskdetailspage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const handleTransferTaskClick = () => {
+    setShowTransferTaskDialog(true);
+  };
+  const closeTransferTaskDialog = () => {
+    setShowTransferTaskDialog(false);
+  };
 
   const handleAssignClick = () => {
     setShowDialog(true);
@@ -60,10 +68,18 @@ const Taskdetailspage = () => {
 
             {showDropdown && (
               <div className={styles.dropdown}>
-                <div className={styles.dropdownItem}>Transfer Task</div>
+                <div
+                  className={styles.dropdownItem}
+                  onClick={handleTransferTaskClick}
+                >
+                  Transfer Task
+                </div>
               </div>
             )}
           </div>
+          {showTransferTaskDialog && (
+            <Transfertaskdialog onClose={closeTransferTaskDialog} />
+          )}
 
           <div className={styles.infoSection}>
             <div className={styles.leftSection}>

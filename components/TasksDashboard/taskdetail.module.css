@@ -1,6 +1,5 @@
 .detailsContainer {
     width: 800px;
-    /* border-radius: 20px; */
     max-height: 250px;
     background-color: #1a1a1aa8;
     margin: 10px;
@@ -10,8 +9,6 @@
     font-size: 13px;
     font-weight: 400;
     position: relative;
-  
-    /* clip-path: path("M 0 20 Q 0 0 20 0 H 620 Q 660 0 690 20 Q 750 50 770 90 Q 790 130 790 160 Q 790 180 770 200 Q 750 220 700 230 Q 690 230 620 230 H 20 Q 0 230 0 210 Z"); */
   }
   
   .leftSection {
