@@ -8,7 +8,7 @@ const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    fetch("https://api.evhomes.tech/ourProjects", {
+    fetch("/api/ourProjects", {
       headers: {
         "x-platform": "web",
       },

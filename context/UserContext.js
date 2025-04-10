@@ -22,7 +22,7 @@ export const UserProvider = ({ children }) => {
     setError("");
 
     try {
-      const res = await fetch("https://api.evhomes.tech/employee-login", {
+      const res = await fetch("/api/employee-login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./taskcards.module.css";
+import Image from "next/image";
 
 const Taskcards = () => {
   const tasks = [
@@ -20,10 +21,12 @@ const Taskcards = () => {
         <div className={styles.taskList}>
           {tasks.map((task, index) => (
             <div key={index} className={styles.taskCard}>
-              <img
+              <Image
                 src="/profile.jpg"
                 alt="Profile"
-                className={styles.profilePic}
+                width={40}
+                height={40}
+                // className={styles.profilePic}
               />
               <div className={styles.taskInfo}>
                 <p className={styles.clientName}>{task.name}</p>
